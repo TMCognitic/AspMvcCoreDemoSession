@@ -1,0 +1,27 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Panier";
+}
+
+<h1>Panier</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Article</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (string item in Model) {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
